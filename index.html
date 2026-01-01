@@ -3,24 +3,43 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>BT-Remodeling</title>
+  <title>BT Remodeling</title>
+  <meta name="description" content="BT Remodeling: indoor and outdoor general contractor. Residential and commercial renovations, kitchens, baths, framing, drywall, and more." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700;800&display=swap" rel="stylesheet" />
+
   <link rel="stylesheet" href="styles/main.css" />
 </head>
 <body>
 
+  <a class="skip-link" href="#main">Skip to content</a>
+
   <header class="site-header" id="top">
     <div class="container">
       <div class="site-header__inner">
-        <a class="brand" href="#top">BT Remodeling</a>
+        <a class="brand" href="#top" aria-label="BT Remodeling home">
+          <img class="brand__logo" src="assets/logo.png" alt="BT Remodeling" width="44" height="44" />
+          <span class="brand__text">BT Remodeling</span>
+        </a>
 
-        <nav class="nav" aria-label="Primary">
+        <button class="nav-toggle" type="button" aria-controls="primary-nav" aria-expanded="false">
+          <span class="sr-only">Open menu</span>
+          <span class="nav-toggle__bar" aria-hidden="true"></span>
+          <span class="nav-toggle__bar" aria-hidden="true"></span>
+          <span class="nav-toggle__bar" aria-hidden="true"></span>
+        </button>
+
+        <nav class="nav" id="primary-nav" aria-label="Primary">
           <a class="nav__link" href="#hero">Home</a>
           <a class="nav__link" href="#our-history">Our History</a>
           <a class="nav__link" href="#services">Services</a>
           <a class="nav__link" href="#portfolio">Portfolio</a>
           <a class="nav__link" href="#recent-projects">Recent Projects</a>
           <a class="nav__link" href="#testimonials">Testimonials</a>
-          <a class="nav__link" href="#contact">Contact Us</a>
+          <a class="nav__link" href="#contact">Contact</a>
+          <a class="btn btn--primary nav__cta" href="#contact">Get a quote</a>
         </nav>
 
         <a class="header-action" href="#contact" aria-label="Call us">☎</a>
@@ -28,83 +47,395 @@
     </div>
   </header>
 
-  <section class="section" id="hero">
+  <main id="main">
+    <section class="hero" id="hero" aria-label="Hero">
+      <div class="hero__bg" aria-hidden="true"></div>
+      <div class="container">
+        <div class="hero__inner">
+          <div class="hero__copy">
+            <span class="kicker">Trusted since 2016</span>
+            <h1>Indoor and Outdoor General Contractor</h1>
+            <p class="hero__subtitle">
+              Residential and Commercial Renovations • Kitchen and Bath • Drywall • Framing • Finishes
+            </p>
+            <div class="hero__actions">
+              <a class="btn btn--primary" href="#contact">Request a quote</a>
+              <a class="btn btn--ghost" href="#portfolio">View portfolio</a>
+            </div>
+            <ul class="hero__bullets" aria-label="Key benefits">
+              <li>Licensed & insured</li>
+              <li>Clear timelines</li>
+              <li>Clean job sites</li>
+            </ul>
+          </div>
+
+          <div class="hero__card" role="complementary" aria-label="Quick contact">
+            <h2 class="hero__card-title">Talk to a contractor</h2>
+            <p class="hero__card-subtitle">Send us your project details. We reply within 24 hours.</p>
+            <a class="btn btn--primary btn--full" href="#contact">Contact us</a>
+            <div class="hero__meta">
+              <div class="meta">
+                <span class="meta__label">Service areas</span>
+                <span class="meta__value">Texas & nearby</span>
+              </div>
+              <div class="meta">
+                <span class="meta__label">Hours</span>
+                <span class="meta__value">Mon–Sat</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="our-history">
+      <div class="container">
+        <header class="section__header">
+          <span class="kicker-line" aria-hidden="true"></span>
+          <h2 class="section__title">Our History</h2>
+          <p class="section__subtitle">
+            Since 2016, BT Remodeling has been transforming spaces and creating value in Texas and beyond.
+          </p>
+        </header>
+
+        <div class="split">
+          <div class="split__media">
+            <img class="frame" src="assets/our_history.jpg" alt="Remodeling work in progress" loading="lazy" />
+          </div>
+          <div class="split__content">
+            <p>
+              We handle projects end-to-end, from planning and material selection to finishing details.
+              Our commercial services cover metal framing, drywall, doors, and acoustical ceilings.
+              For residential work, we specialize in kitchens, bathrooms, flooring, paint, and exterior upgrades.
+            </p>
+            <ul class="checks" aria-label="Company strengths">
+              <li>Scope and estimate clarity before work starts</li>
+              <li>Daily progress communication</li>
+              <li>Worksite protection and cleanup</li>
+            </ul>
+            <a class="btn btn--primary" href="#services">Explore services</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--alt" id="services">
+      <div class="container">
+        <header class="section__header">
+          <span class="kicker-line" aria-hidden="true"></span>
+          <h2 class="section__title">Services</h2>
+          <p class="section__subtitle">Residential and commercial work—built for durability and clean finishes.</p>
+        </header>
+
+        <div class="grid grid--services" role="list">
+          <article class="card service-card" role="listitem">
+  <img class="card__icon" src="assets/services/img1_services.png" alt="" loading="lazy" />
+  <h3 class="card__title">Kitchen Remodeling</h3>
+
+  <!-- overlay hover -->
+  <div class="service-card__overlay" aria-hidden="true">
+    <h4 class="service-card__overlay-title">Kitchen Remodeling</h4>
+    <p class="service-card__overlay-text">
+      Cabinets, countertops, lighting, plumbing coordination, and full upgrades.
+    </p>
+  </div>
+</article>
+
+<article class="service" role="listitem">
+  <div class="service__icon">
+    <img src="assets/services/img1_services.png" alt="" loading="lazy" />
+  </div>
+  <h3 class="service__title">Kitchen Remodeling</h3>
+  <p class="service__desc">Cabinets, countertops, lighting, plumbing coordination, and full upgrades.</p>
+
+  <div class="service__hover" aria-hidden="true">
+    <h4>Kitchen Remodeling</h4>
+    <p>Full kitchen upgrades: cabinets, countertops, lighting, plumbing coordination, layout improvements.</p>
+  </div>
+</article>
+
+<article class="service" role="listitem">
+  <div class="service__icon">
+    <img src="assets/services/img2_services.png" alt="" loading="lazy" />
+  </div>
+  <h3 class="service__title">Bathroom Remodeling</h3>
+  <p class="service__desc">Tile, showers, vanities, fixtures, ventilation, and water-proofing details.</p>
+
+  <div class="service__hover" aria-hidden="true">
+    <h4>Bathroom Remodeling</h4>
+    <p>Tile, showers, vanities, fixtures, ventilation, and waterproofing—clean and durable finishes.</p>
+  </div>
+</article>
+
+<article class="service" role="listitem">
+  <div class="service__icon">
+    <img src="assets/services/img3_services.png" alt="" loading="lazy" />
+  </div>
+  <h3 class="service__title">Drywall &amp; Finishing</h3>
+  <p class="service__desc">Hanging, tape &amp; bed, texture matching, repairs, and smooth paint-ready walls.</p>
+
+  <div class="service__hover" aria-hidden="true">
+    <h4>Drywall &amp; Finishing</h4>
+    <p>Hang, tape/bed, repairs and texture matching for smooth, paint-ready walls.</p>
+  </div>
+</article>
+
+<article class="service" role="listitem">
+  <div class="service__icon">
+    <img src="assets/services/img4_services.png" alt="" loading="lazy" />
+  </div>
+  <h3 class="service__title">Framing</h3>
+  <p class="service__desc">Metal framing for commercial builds and wood framing for residential spaces.</p>
+
+  <div class="service__hover" aria-hidden="true">
+    <h4>Framing</h4>
+    <p>Commercial metal framing and residential wood framing, aligned and ready for buildout.</p>
+  </div>
+</article>
+
+<article class="service" role="listitem">
+  <div class="service__icon">
+    <img src="assets/services/img5_services.png" alt="" loading="lazy" />
+  </div>
+  <h3 class="service__title">Flooring</h3>
+  <p class="service__desc">Hardwood, laminate, tile, and durable finishes for high-traffic areas.</p>
+
+  <div class="service__hover" aria-hidden="true">
+    <h4>Flooring</h4>
+    <p>Hardwood, laminate, tile, and durable installs built for high-traffic areas.</p>
+  </div>
+</article>
+
+<article class="service" role="listitem">
+  <div class="service__icon">
+    <img src="assets/services/img6_services.png" alt="" loading="lazy" />
+  </div>
+  <h3 class="service__title">Doors &amp; Ceilings</h3>
+  <p class="service__desc">Commercial doors, hardware, and acoustical ceiling installation.</p>
+
+  <div class="service__hover" aria-hidden="true">
+    <h4>Doors &amp; Ceilings</h4>
+    <p>Commercial doors/hardware and acoustical ceilings—clean install and tight finishing.</p>
+  </div>
+</article>
+
+
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="portfolio">
+      <div class="container">
+        <header class="section__header">
+          <span class="kicker-line" aria-hidden="true"></span>
+          <h2 class="section__title">Portfolio</h2>
+          <p class="section__subtitle">A sample of our finishes across residential and commercial work.</p>
+        </header>
+
+        <div class="grid grid--portfolio" aria-label="Portfolio gallery">
+          <figure class="media-card">
+            <img src="assets/portfolio/img1_portfolio.png" alt="Kitchen remodel" loading="lazy" />
+          </figure>
+          <figure class="media-card">
+            <img src="assets/portfolio/img2_portfolio.png" alt="Bathroom tile" loading="lazy" />
+          </figure>
+          <figure class="media-card">
+            <img src="assets/portfolio/img3_portfolio.png" alt="Interior drywall finishing" loading="lazy" />
+          </figure>
+          <figure class="media-card">
+            <img src="assets/portfolio/img4_potfolio.png" alt="Commercial framing" loading="lazy" />
+          </figure>
+          <figure class="media-card">
+            <img src="assets/portfolio/img5_portfolio.png" alt="Exterior renovation" loading="lazy" />
+          </figure>
+          <figure class="media-card">
+            <img src="assets/portfolio/img6_portfolio.png" alt="Modern interior finish" loading="lazy" />
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--alt" id="recent-projects">
+      <div class="container">
+        <header class="section__header">
+          <span class="kicker-line" aria-hidden="true"></span>
+          <h2 class="section__title">Our most recent projects</h2>
+          <p class="section__subtitle">Recent work highlights—from framing to final finishes.</p>
+        </header>
+
+        <div class="grid grid--recent" aria-label="Recent projects">
+          <article class="project">
+            <img src="assets/slider/img1_slider.jpg" alt="Recent project 1" loading="lazy" />
+            <div class="project__body">
+              <h3 class="project__title">Residential Kitchen Upgrade</h3>
+              <p class="project__text">Layout improvements, cabinet install, backsplash, and lighting.</p>
+            </div>
+          </article>
+          <article class="project">
+            <img src="assets/slider/img2_slider.jpg" alt="Recent project 2" loading="lazy" />
+            <div class="project__body">
+              <h3 class="project__title">Commercial Drywall Build</h3>
+              <p class="project__text">Metal framing, drywall, doors, and clean finishing passes.</p>
+            </div>
+          </article>
+          <article class="project">
+            <img src="assets/slider/img3_slider.jpg" alt="Recent project 3" loading="lazy" />
+            <div class="project__body">
+              <h3 class="project__title">Bathroom Remodel</h3>
+              <p class="project__text">Waterproofing, tile, vanity install, and fixture upgrades.</p>
+            </div>
+          </article>
+          <article class="project">
+            <img src="assets/slider/img4_slider.jpg" alt="Recent project 4" loading="lazy" />
+            <div class="project__body">
+              <h3 class="project__title">Exterior Refresh</h3>
+              <p class="project__text">Repairs, paint, trim, and durability-focused finishing.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="testimonials">
+      <div class="container">
+        <header class="section__header">
+          <span class="kicker-line" aria-hidden="true"></span>
+          <h2 class="section__title">Our Testimonials</h2>
+          <p class="section__subtitle">What clients say about our process and results.</p>
+        </header>
+
+        <div class="grid grid--testimonials" aria-label="Client testimonials">
+          <article class="testimonial">
+            <img class="testimonial__avatar" src="assets/testimonials/img1_testimonials.jpg" alt="Client portrait" loading="lazy" />
+            <p class="testimonial__quote">“Clear estimate, on-time work, and excellent finish quality. Our kitchen looks brand new.”</p>
+            <p class="testimonial__name">— Residential Client</p>
+          </article>
+          <article class="testimonial">
+            <img class="testimonial__avatar" src="assets/testimonials/img2_testimonials.png" alt="Client portrait" loading="lazy" />
+            <p class="testimonial__quote">“Professional crew. They kept the site clean and communicated progress daily.”</p>
+            <p class="testimonial__name">— Commercial Client</p>
+          </article>
+          <article class="testimonial">
+            <img class="testimonial__avatar" src="assets/testimonials/img3_testimonials.png" alt="Client portrait" loading="lazy" />
+            <p class="testimonial__quote">“Great tile work and attention to detail. The bathroom remodel turned out perfect.”</p>
+            <p class="testimonial__name">— Homeowner</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--contact" id="contact">
+      <div class="container">
+        <header class="section__header">
+          <span class="kicker-line" aria-hidden="true"></span>
+          <h2 class="section__title">Contact Us</h2>
+          <p class="section__subtitle">Tell us what you want to build. We’ll respond with next steps.</p>
+        </header>
+
+        <div class="contact">
+          <form class="form" aria-label="Contact form" method="post" action="#">
+            <div class="form__row">
+              <label class="field">
+                <span class="field__label">Full name</span>
+                <input class="field__input" name="name" type="text" autocomplete="name" required />
+              </label>
+              <label class="field">
+                <span class="field__label">Phone</span>
+                <input class="field__input" name="phone" type="tel" autocomplete="tel" required />
+              </label>
+            </div>
+
+            <div class="form__row">
+              <label class="field">
+                <span class="field__label">Email</span>
+                <input class="field__input" name="email" type="email" autocomplete="email" required />
+              </label>
+              <label class="field">
+                <span class="field__label">Service</span>
+                <select class="field__input" name="service" required>
+                  <option value="" selected disabled>Select a service</option>
+                  <option>Kitchen remodel</option>
+                  <option>Bathroom remodel</option>
+                  <option>Drywall & finishing</option>
+                  <option>Framing</option>
+                  <option>Flooring</option>
+                  <option>Commercial build</option>
+                </select>
+              </label>
+            </div>
+
+            <label class="field">
+              <span class="field__label">Project details</span>
+              <textarea class="field__input" name="message" rows="5" required></textarea>
+            </label>
+
+            <button class="btn btn--primary" type="submit">Send message</button>
+            <p class="form__fineprint">This form is static in the demo. Wire it to your backend/email service when deploying.</p>
+          </form>
+
+          <aside class="contact__aside" aria-label="Contact details">
+            <div class="info-card">
+              <h3 class="info-card__title">Call / Text</h3>
+              <p class="info-card__text">Add your business number here.</p>
+              <a class="btn btn--ghost btn--full" href="#">(###) ###-####</a>
+            </div>
+            <div class="info-card">
+              <h3 class="info-card__title">Email</h3>
+              <p class="info-card__text">Add your business email here.</p>
+              <a class="btn btn--ghost btn--full" href="#">hello@btremodeling.com</a>
+            </div>
+            <div class="info-card">
+              <h3 class="info-card__title">Service area</h3>
+              <p class="info-card__text">Texas and surrounding areas. Ask about availability.</p>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
     <div class="container">
-      <header class="section__header">
-        <span class="kicker-line" aria-hidden="true"></span>
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <img src="assets/logo.png" alt="BT Remodeling" width="44" height="44" loading="lazy" />
+          <p class="footer__text">Indoor & outdoor general contractor. Residential and commercial renovations.</p>
+        </div>
 
-        <h1>Indoor and Outdoor General Contractor</h1>
+        <div>
+          <h3 class="footer__heading">Company</h3>
+          <ul class="footer__links">
+            <li><a href="#our-history">Our History</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+          </ul>
+        </div>
 
-        <p class="section__subtitle">
-          Residential and Commercial Renovations • Kitchen and Bath
-        </p>
-      </header>
+        <div>
+          <h3 class="footer__heading">Contact</h3>
+          <ul class="footer__links">
+            <li><a href="#contact">Request a quote</a></li>
+            <li><a href="#">(###) ###-####</a></li>
+            <li><a href="#">hello@btremodeling.com</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="footer__heading">Hours</h3>
+          <ul class="footer__links">
+            <li>Mon–Sat</li>
+            <li>Closed Sundays</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer__bottom">
+        <p>© <span id="year"></span> BT Remodeling. All rights reserved.</p>
+        <a class="to-top" href="#top">Back to top ↑</a>
+      </div>
     </div>
-  </section>
+  </footer>
 
-  <section class="section" id="our-history">
-    <div class="container">
-      <header class="section__header">
-        <span class="kicker-line" aria-hidden="true"></span>
-        <h2 class="section__title">Our History</h2>
-      </header>
-
-      <p class="section__subtitle">
-        Since 2016, BT Remodeling has been transforming spaces and creating value in Texas and beyond.
-        As a dedicated team of professionals in both commercial and residential sectors, we bring a wealth
-        of experience and a commitment to excellence in every project we undertake. Commercial Expertise:
-        From intricate metal framing and drywall installations to the precise work of installing doors and
-        acoustical ceilings, our commercial services cater to a variety of business needs, ensuring functionality
-        and aesthetic appeal. Residential Mastery: In the realm of residential remodeling.
-      </p>
-    </div>
-  </section>
-
-  <section class="section" id="services">
-    <div class="container">
-      <header class="section__header">
-        <span class="kicker-line" aria-hidden="true"></span>
-        <h2 class="section__title">Services</h2>
-      </header>
-    </div>
-  </section>
-
-  <section class="section" id="portfolio">
-    <div class="container">
-      <header class="section__header">
-        <span class="kicker-line" aria-hidden="true"></span>
-        <h2 class="section__title">Portfolio</h2>
-      </header>
-    </div>
-  </section>
-
-  <section class="section" id="recent-projects">
-    <div class="container">
-      <header class="section__header">
-        <span class="kicker-line" aria-hidden="true"></span>
-        <h2 class="section__title">Our most recent projects</h2>
-      </header>
-    </div>
-  </section>
-
-  <section class="section" id="testimonials">
-    <div class="container">
-      <header class="section__header">
-        <span class="kicker-line" aria-hidden="true"></span>
-        <h2 class="section__title">Our Testimonials</h2>
-      </header>
-    </div>
-  </section>
-
-  <section class="section" id="contact">
-    <div class="container">
-      <header class="section__header">
-        <span class="kicker-line" aria-hidden="true"></span>
-        <h2 class="section__title">Contact Us</h2>
-      </header>
-    </div>
-  </section>
-
-  <footer></footer>
+  <script src="scripts/main.js"></script>
 </body>
 </html>

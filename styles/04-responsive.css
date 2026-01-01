@@ -1,0 +1,149 @@
+/* Tablet and down */
+@media (max-width: 900px) {
+  :root {
+    --fs-h1: 56px;
+    --fs-h2: 38px;
+  }
+
+  .nav-toggle {
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .nav {
+    position: fixed;
+    top: 72px;
+    right: 16px;
+    left: 16px;
+    background: var(--color-bg);
+    border: 1px solid var(--color-border);
+    border-radius: 20px;
+    padding: var(--space-3);
+    box-shadow: var(--shadow-card);
+    display: none;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 8px;
+  }
+
+  .nav--open {
+    display: flex;
+  }
+
+  .nav__link {
+    padding: 12px 10px;
+  }
+
+  .nav__cta {
+    margin-left: 0;
+  }
+
+  .hero {
+    padding-block: var(--space-12);
+  }
+
+  .hero__inner {
+    grid-template-columns: 1fr;
+  }
+
+  .hero__meta {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .split {
+    grid-template-columns: 1fr;
+  }
+
+  .grid--services {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .grid--portfolio {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .grid--recent {
+    grid-template-columns: 1fr;
+  }
+
+  .grid--testimonials {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .contact {
+    grid-template-columns: 1fr;
+  }
+
+  .footer__grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* Small phones */
+@media (max-width: 600px) {
+  :root {
+    --container-pad: 18px;
+    --fs-h1: 40px;
+    --fs-h2: 30px;
+  }
+
+  .brand__text {
+    display: none;
+  }
+
+  .hero__actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .hero__meta {
+    grid-template-columns: 1fr;
+  }
+
+  .grid--services,
+  .grid--portfolio,
+  .grid--testimonials {
+    grid-template-columns: 1fr;
+  }
+
+  .form__row {
+    grid-template-columns: 1fr;
+  }
+
+  .footer__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .footer__bottom {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  /* Responsive */
+@media (max-width: 900px) {
+  .grid--services {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 22px;
+  }
+}
+
+@media (max-width: 600px) {
+  .grid--services {
+    grid-template-columns: 1fr;
+  }
+
+  /* En móvil no hay hover real: que el overlay se vuelva “contenido normal” */
+  .service__hover {
+    position: static;
+    opacity: 1;
+    transform: none;
+    pointer-events: auto;
+    background: transparent;
+    backdrop-filter: none;
+    padding: 0;
+    margin-top: 12px;
+  }
+}
+
+}
