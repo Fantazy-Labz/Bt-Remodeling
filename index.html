@@ -127,99 +127,34 @@
           <p class="section__subtitle">Residential and commercial work—built for durability and clean finishes.</p>
         </header>
 
-        <div class="grid grid--services" role="list">
-          <article class="card service-card" role="listitem">
-  <img class="card__icon" src="assets/services/img1_services.png" alt="" loading="lazy" />
-  <h3 class="card__title">Kitchen Remodeling</h3>
-
-  <!-- overlay hover -->
-  <div class="service-card__overlay" aria-hidden="true">
-    <h4 class="service-card__overlay-title">Kitchen Remodeling</h4>
-    <p class="service-card__overlay-text">
-      Cabinets, countertops, lighting, plumbing coordination, and full upgrades.
-    </p>
-  </div>
-</article>
-
-<article class="service" role="listitem">
-  <div class="service__icon">
-    <img src="assets/services/img1_services.png" alt="" loading="lazy" />
-  </div>
-  <h3 class="service__title">Kitchen Remodeling</h3>
-  <p class="service__desc">Cabinets, countertops, lighting, plumbing coordination, and full upgrades.</p>
-
-  <div class="service__hover" aria-hidden="true">
-    <h4>Kitchen Remodeling</h4>
-    <p>Full kitchen upgrades: cabinets, countertops, lighting, plumbing coordination, layout improvements.</p>
-  </div>
-</article>
-
-<article class="service" role="listitem">
-  <div class="service__icon">
-    <img src="assets/services/img2_services.png" alt="" loading="lazy" />
-  </div>
-  <h3 class="service__title">Bathroom Remodeling</h3>
-  <p class="service__desc">Tile, showers, vanities, fixtures, ventilation, and water-proofing details.</p>
-
-  <div class="service__hover" aria-hidden="true">
-    <h4>Bathroom Remodeling</h4>
-    <p>Tile, showers, vanities, fixtures, ventilation, and waterproofing—clean and durable finishes.</p>
-  </div>
-</article>
-
-<article class="service" role="listitem">
-  <div class="service__icon">
-    <img src="assets/services/img3_services.png" alt="" loading="lazy" />
-  </div>
-  <h3 class="service__title">Drywall &amp; Finishing</h3>
-  <p class="service__desc">Hanging, tape &amp; bed, texture matching, repairs, and smooth paint-ready walls.</p>
-
-  <div class="service__hover" aria-hidden="true">
-    <h4>Drywall &amp; Finishing</h4>
-    <p>Hang, tape/bed, repairs and texture matching for smooth, paint-ready walls.</p>
-  </div>
-</article>
-
-<article class="service" role="listitem">
-  <div class="service__icon">
-    <img src="assets/services/img4_services.png" alt="" loading="lazy" />
-  </div>
-  <h3 class="service__title">Framing</h3>
-  <p class="service__desc">Metal framing for commercial builds and wood framing for residential spaces.</p>
-
-  <div class="service__hover" aria-hidden="true">
-    <h4>Framing</h4>
-    <p>Commercial metal framing and residential wood framing, aligned and ready for buildout.</p>
-  </div>
-</article>
-
-<article class="service" role="listitem">
-  <div class="service__icon">
-    <img src="assets/services/img5_services.png" alt="" loading="lazy" />
-  </div>
-  <h3 class="service__title">Flooring</h3>
-  <p class="service__desc">Hardwood, laminate, tile, and durable finishes for high-traffic areas.</p>
-
-  <div class="service__hover" aria-hidden="true">
-    <h4>Flooring</h4>
-    <p>Hardwood, laminate, tile, and durable installs built for high-traffic areas.</p>
-  </div>
-</article>
-
-<article class="service" role="listitem">
-  <div class="service__icon">
-    <img src="assets/services/img6_services.png" alt="" loading="lazy" />
-  </div>
-  <h3 class="service__title">Doors &amp; Ceilings</h3>
-  <p class="service__desc">Commercial doors, hardware, and acoustical ceiling installation.</p>
-
-  <div class="service__hover" aria-hidden="true">
-    <h4>Doors &amp; Ceilings</h4>
-    <p>Commercial doors/hardware and acoustical ceilings—clean install and tight finishing.</p>
-  </div>
-</article>
-
-
+        <div class="grid grid--services" role="list" aria-label="Services gallery">
+          <figure class="service-image">
+            <img src="assets/slider/img1_slider.jpg" alt="Kitchen remodeling project" loading="lazy" />
+          </figure>
+          <figure class="service-image">
+            <img src="assets/slider/img2_slider.jpg" alt="Bathroom remodeling project" loading="lazy" />
+          </figure>
+          <figure class="service-image">
+            <img src="assets/slider/img3_slider.jpg" alt="Interior work" loading="lazy" />
+          </figure>
+          <figure class="service-image">
+            <img src="assets/slider/img4_slider.jpg" alt="Exterior renovation" loading="lazy" />
+          </figure>
+          <figure class="service-image">
+            <img src="assets/portfolio/img1_portfolio.png" alt="Kitchen project" loading="lazy" />
+          </figure>
+          <figure class="service-image">
+            <img src="assets/portfolio/img2_portfolio.png" alt="Bathroom tile work" loading="lazy" />
+          </figure>
+          <figure class="service-image">
+            <img src="assets/portfolio/img3_portfolio.png" alt="Drywall finishing" loading="lazy" />
+          </figure>
+          <figure class="service-image">
+            <img src="assets/portfolio/img4_potfolio.png" alt="Commercial framing" loading="lazy" />
+          </figure>
+          <figure class="service-image">
+            <img src="assets/portfolio/img5_portfolio.png" alt="Exterior renovation" loading="lazy" />
+          </figure>
         </div>
       </div>
     </section>
@@ -233,23 +168,53 @@
         </header>
 
         <div class="grid grid--portfolio" aria-label="Portfolio gallery">
-          <figure class="media-card">
+          <figure class="portfolio-card">
             <img src="assets/portfolio/img1_portfolio.png" alt="Kitchen remodel" loading="lazy" />
+            <div class="portfolio-overlay" aria-hidden="true">
+              <h3 class="portfolio-overlay__title">Kitchen Remodeling</h3>
+              <p class="portfolio-overlay__desc">Complete kitchen renovation with custom cabinetry and premium finishes.</p>
+              <a class="btn btn--ghost portfolio-overlay__btn" href="#contact">Book Now</a>
+            </div>
           </figure>
-          <figure class="media-card">
+          <figure class="portfolio-card">
             <img src="assets/portfolio/img2_portfolio.png" alt="Bathroom tile" loading="lazy" />
+            <div class="portfolio-overlay" aria-hidden="true">
+              <h3 class="portfolio-overlay__title">Bathroom Tile</h3>
+              <p class="portfolio-overlay__desc">Professional tile installation with waterproofing and elegant design.</p>
+              <a class="btn btn--ghost portfolio-overlay__btn" href="#contact">Book Now</a>
+            </div>
           </figure>
-          <figure class="media-card">
+          <figure class="portfolio-card">
             <img src="assets/portfolio/img3_portfolio.png" alt="Interior drywall finishing" loading="lazy" />
+            <div class="portfolio-overlay" aria-hidden="true">
+              <h3 class="portfolio-overlay__title">Drywall & Finishing</h3>
+              <p class="portfolio-overlay__desc">Precision drywall work with smooth finishes ready for paint.</p>
+              <a class="btn btn--ghost portfolio-overlay__btn" href="#contact">Book Now</a>
+            </div>
           </figure>
-          <figure class="media-card">
+          <figure class="portfolio-card">
             <img src="assets/portfolio/img4_potfolio.png" alt="Commercial framing" loading="lazy" />
+            <div class="portfolio-overlay" aria-hidden="true">
+              <h3 class="portfolio-overlay__title">Dooring</h3>
+              <p class="portfolio-overlay__desc">This project showcases a premium wooden door installation, enhancing the home's entrance with its rich finish and contemporary hardware.</p>
+              <a class="btn btn--ghost portfolio-overlay__btn" href="#contact">Book Now</a>
+            </div>
           </figure>
-          <figure class="media-card">
+          <figure class="portfolio-card">
             <img src="assets/portfolio/img5_portfolio.png" alt="Exterior renovation" loading="lazy" />
+            <div class="portfolio-overlay" aria-hidden="true">
+              <h3 class="portfolio-overlay__title">Exterior Renovation</h3>
+              <p class="portfolio-overlay__desc">Complete exterior upgrade including framing and structural improvements.</p>
+              <a class="btn btn--ghost portfolio-overlay__btn" href="#contact">Book Now</a>
+            </div>
           </figure>
-          <figure class="media-card">
+          <figure class="portfolio-card">
             <img src="assets/portfolio/img6_portfolio.png" alt="Modern interior finish" loading="lazy" />
+            <div class="portfolio-overlay" aria-hidden="true">
+              <h3 class="portfolio-overlay__title">Interior Finishes</h3>
+              <p class="portfolio-overlay__desc">Attention to detail in every modern interior finishing touch.</p>
+              <a class="btn btn--ghost portfolio-overlay__btn" href="#contact">Book Now</a>
+            </div>
           </figure>
         </div>
       </div>
@@ -264,35 +229,61 @@
         </header>
 
         <div class="grid grid--recent" aria-label="Recent projects">
-          <article class="project">
-            <img src="assets/slider/img1_slider.jpg" alt="Recent project 1" loading="lazy" />
+          <button class="project" data-project="0">
+            <img src="assets/slider/img1_slider.jpg" alt="Meadow Heath Lane Tx" loading="lazy" />
             <div class="project__body">
-              <h3 class="project__title">Residential Kitchen Upgrade</h3>
-              <p class="project__text">Layout improvements, cabinet install, backsplash, and lighting.</p>
+              <h3 class="project__title">Meadow Heath Lane Tx</h3>
+              <p class="project__text">Complete residential renovation with modern finishes.</p>
             </div>
-          </article>
-          <article class="project">
-            <img src="assets/slider/img2_slider.jpg" alt="Recent project 2" loading="lazy" />
+          </button>
+          <button class="project" data-project="1">
+            <img src="assets/slider/img2_slider.jpg" alt="Bayonne In Mansfield Tx" loading="lazy" />
             <div class="project__body">
-              <h3 class="project__title">Commercial Drywall Build</h3>
-              <p class="project__text">Metal framing, drywall, doors, and clean finishing passes.</p>
+              <h3 class="project__title">Bayonne In Mansfield Tx</h3>
+              <p class="project__text">Country modern home with resort-style pool and contemporary upgrades.</p>
             </div>
-          </article>
-          <article class="project">
-            <img src="assets/slider/img3_slider.jpg" alt="Recent project 3" loading="lazy" />
+          </button>
+          <button class="project" data-project="2">
+            <img src="assets/slider/img3_slider.jpg" alt="Hedgerow Tx" loading="lazy" />
             <div class="project__body">
-              <h3 class="project__title">Bathroom Remodel</h3>
-              <p class="project__text">Waterproofing, tile, vanity install, and fixture upgrades.</p>
+              <h3 class="project__title">Hedgerow Tx</h3>
+              <p class="project__text">Modern farmhouse renovation with high-end finishes.</p>
             </div>
-          </article>
-          <article class="project">
-            <img src="assets/slider/img4_slider.jpg" alt="Recent project 4" loading="lazy" />
+          </button>
+          <button class="project" data-project="3">
+            <img src="assets/slider/img4_slider.jpg" alt="Crossbend Tx" loading="lazy" />
             <div class="project__body">
-              <h3 class="project__title">Exterior Refresh</h3>
-              <p class="project__text">Repairs, paint, trim, and durability-focused finishing.</p>
+              <h3 class="project__title">Crossbend Tx</h3>
+              <p class="project__text">Contemporary home with sustainable design elements.</p>
             </div>
-          </article>
+          </button>
         </div>
+      </div>
+    </section>
+
+    <!-- Project Modal -->
+    <div class="project-modal" id="projectModal">
+      <div class="project-modal__overlay"></div>
+      <div class="project-modal__content">
+        <button class="project-modal__close" aria-label="Close modal">✕</button>
+        
+        <div class="project-modal__main">
+          <div class="project-modal__carousel">
+            <div class="carousel-image" id="carouselImage">
+              <img src="" alt="Project image" loading="lazy" />
+            </div>
+            <button class="carousel-control carousel-control--prev" aria-label="Previous image">‹</button>
+            <button class="carousel-control carousel-control--next" aria-label="Next image">›</button>
+          </div>
+          
+          <div class="project-modal__info">
+            <h2 class="project-modal__title" id="modalTitle"></h2>
+            <p class="project-modal__description" id="modalDescription"></p>
+            <div class="project-modal__details" id="modalDetails"></div>
+          </div>
+        </div>
+      </div>
+    </div>
       </div>
     </section>
 
