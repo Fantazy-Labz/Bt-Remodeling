@@ -301,6 +301,7 @@
   display: grid;
   gap: var(--space-3);
   margin-top: var(--space-6);
+  margin-right: 30px;
 }
 
 .grid--services {
