@@ -53,8 +53,16 @@
     grid-template-columns: 1fr;
   }
 
+  /* Services grid: reset irregular masonry to 2 columns */
   .grid--services {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-auto-rows: auto;
+    gap: 16px;
+  }
+
+  .service-image {
+    grid-column: span 1 !important;
+    grid-row: span 1 !important;
   }
 
   .grid--portfolio {
@@ -99,10 +107,18 @@
     grid-template-columns: 1fr;
   }
 
+  /* Services grid: reset to single column on mobile */
   .grid--services,
   .grid--portfolio,
   .grid--testimonials {
     grid-template-columns: 1fr;
+    grid-auto-rows: auto;
+    gap: 12px;
+  }
+
+  .service-image {
+    grid-column: span 1 !important;
+    grid-row: span 1 !important;
   }
 
   .form__row {
@@ -117,31 +133,4 @@
     flex-direction: column;
     align-items: flex-start;
   }
-
-  /* Responsive */
-@media (max-width: 900px) {
-  .grid--services {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 22px;
-  }
-}
-
-@media (max-width: 600px) {
-  .grid--services {
-    grid-template-columns: 1fr;
-  }
-
-  /* En móvil no hay hover real: que el overlay se vuelva “contenido normal” */
-  .service__hover {
-    position: static;
-    opacity: 1;
-    transform: none;
-    pointer-events: auto;
-    background: transparent;
-    backdrop-filter: none;
-    padding: 0;
-    margin-top: 12px;
-  }
-}
-
 }
