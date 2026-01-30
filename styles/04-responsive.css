@@ -75,6 +75,10 @@
     grid-template-columns: 1fr;
   }
 
+  .project-modal__main {
+    grid-template-columns: 1fr;
+  }
+
   .grid--testimonials {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -107,6 +111,10 @@
 
   .hero__meta {
     grid-template-columns: 1fr;
+  }
+
+  .carousel-image {
+    height: 250px;
   }
 
   /* Services grid: reset to single column on mobile */
