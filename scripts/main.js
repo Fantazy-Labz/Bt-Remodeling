@@ -93,7 +93,7 @@ function updateModal() {
   const n = project.images.length;
 
   document.getElementById('carouselImage').innerHTML =
-    `<img src="${project.images[currentImageIndex]}" alt="${project.title}" width="1600" height="1067" />`;
+    `<img src="${project.images[currentImageIndex]}" alt="${project.title}, photo ${currentImageIndex + 1} of ${n}" width="1600" height="1067" />`;
 
   document.getElementById('modalTitle').textContent = project.title;
   document.getElementById('modalDescription').textContent = project.description;
