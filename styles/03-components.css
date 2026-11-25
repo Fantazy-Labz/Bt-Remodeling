@@ -304,10 +304,6 @@
   margin-right: 30px;
 }
 
-.grid--services {
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-}
-
 .grid--portfolio {
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 20px;
