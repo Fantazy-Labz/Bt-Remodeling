@@ -9,9 +9,13 @@
     display: block;
   }
 
+  .brand__logo {
+    height: 44px;
+  }
+
   .nav {
     position: fixed;
-    top: 72px;
+    top: 84px; /* header = 44px logo + 2 × 16px padding, + 8px gap */
     right: 16px;
     left: 16px;
     background: var(--color-bg);
