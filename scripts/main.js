@@ -159,5 +159,18 @@ document.addEventListener('keydown', (e) => {
   }
 });
 
+// Mobile menu
+const toggle = document.querySelector('.nav-toggle');
+const nav = document.getElementById('primary-nav');
+toggle.addEventListener('click', () => {
+  toggle.setAttribute('aria-expanded', nav.classList.toggle('nav--open'));
+});
+nav.addEventListener('click', e => {
+  if (e.target.closest('a')) {
+    nav.classList.remove('nav--open');
+    toggle.setAttribute('aria-expanded', 'false');
+  }
+});
+
 // Year footer
 document.getElementById('year').textContent = new Date().getFullYear();
