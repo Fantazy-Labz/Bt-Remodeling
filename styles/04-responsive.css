@@ -124,11 +124,6 @@
     gap: 12px;
   }
 
-  .service-image {
-    grid-column: span 1 !important;
-    grid-row: span 1 !important;
-  }
-
   .form__row {
     grid-template-columns: 1fr;
   }
