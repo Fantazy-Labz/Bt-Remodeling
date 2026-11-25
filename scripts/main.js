@@ -82,45 +82,22 @@ const projectsData = [
   }
 ];
 
-// Modal handling
+// Modal handling (native <dialog>: Escape, focus trap and ::backdrop come free)
 const modal = document.getElementById('projectModal');
-const modalOverlay = document.querySelector('.project-modal__overlay');
-const closeBtn = document.querySelector('.project-modal__close');
-const projectButtons = document.querySelectorAll('.project');
 
 let currentProjectIndex = 0;
 let currentImageIndex = 0;
 
-// Open modal
-function openModal(projectId) {
-  currentProjectIndex = projectId;
-  currentImageIndex = 0;
-  updateModal();
-  modal.classList.add('active');
-  document.body.style.overflow = 'hidden';
-}
-
-// Close modal
-function closeModal() {
-  modal.classList.remove('active');
-  document.body.style.overflow = 'auto';
-}
-
-// Update modal content
 function updateModal() {
   const project = projectsData[currentProjectIndex];
-  
-  // Update carousel
-  const carouselImage = document.getElementById('carouselImage');
-  carouselImage.innerHTML = `<img src="${project.images[currentImageIndex]}" alt="${project.title}" loading="lazy" />`;
-  
-  // Update info
+  const n = project.images.length;
+
+  document.getElementById('carouselImage').innerHTML =
+    `<img src="${project.images[currentImageIndex]}" alt="${project.title}" width="1600" height="1067" />`;
+
   document.getElementById('modalTitle').textContent = project.title;
   document.getElementById('modalDescription').textContent = project.description;
-  
-  // Update details
-  const detailsContainer = document.getElementById('modalDetails');
-  detailsContainer.innerHTML = project.details.map(detail => 
+  document.getElementById('modalDetails').innerHTML = project.details.map(detail =>
     `<div class="project-modal__detail-item">
       <strong>${detail.label}</strong>
       <span>${detail.value}</span>
@@ -128,36 +105,26 @@ function updateModal() {
   ).join('');
 }
 
-// Carousel controls
-document.querySelector('.carousel-control--prev').addEventListener('click', () => {
-  const project = projectsData[currentProjectIndex];
-  currentImageIndex = (currentImageIndex - 1 + project.images.length) % project.images.length;
+function step(delta) {
+  const n = projectsData[currentProjectIndex].images.length;
+  currentImageIndex = (currentImageIndex + delta + n) % n;
   updateModal();
-});
+}
 
-document.querySelector('.carousel-control--next').addEventListener('click', () => {
-  const project = projectsData[currentProjectIndex];
-  currentImageIndex = (currentImageIndex + 1) % project.images.length;
-  updateModal();
-});
+document.querySelector('.carousel-control--prev').addEventListener('click', () => step(-1));
+document.querySelector('.carousel-control--next').addEventListener('click', () => step(1));
 
-// Modal events
-projectButtons.forEach(button => {
+document.querySelectorAll('.project').forEach(button => {
   button.addEventListener('click', () => {
-    const projectId = parseInt(button.getAttribute('data-project'));
-    openModal(projectId);
+    currentProjectIndex = Number(button.dataset.project);
+    currentImageIndex = 0;
+    updateModal();
+    modal.showModal();
   });
 });
 
-closeBtn.addEventListener('click', closeModal);
-modalOverlay.addEventListener('click', closeModal);
-
-// Close on Escape key
-document.addEventListener('keydown', (e) => {
-  if (e.key === 'Escape') {
-    closeModal();
-  }
-});
+// Click on the backdrop (the dialog itself, outside the content box) closes it
+modal.addEventListener('click', e => e.target === modal && modal.close());
 
 // Mobile menu
 const toggle = document.querySelector('.nav-toggle');

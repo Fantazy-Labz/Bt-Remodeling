@@ -266,12 +266,10 @@
       </div>
     </section>
 
-    <!-- Project Modal -->
-    <div class="project-modal" id="projectModal">
-      <div class="project-modal__overlay"></div>
+    <dialog class="project-modal" id="projectModal" aria-labelledby="modalTitle">
       <div class="project-modal__content">
-        <button class="project-modal__close" aria-label="Close modal">✕</button>
-        
+        <form method="dialog"><button class="project-modal__close" aria-label="Close modal">✕</button></form>
+
         <div class="project-modal__main">
           <div class="project-modal__info">
             <h2 class="project-modal__title" id="modalTitle"></h2>
@@ -285,7 +283,7 @@
           </div>
         </div>
       </div>
-    </div>
+    </dialog>
 
     <section class="section" id="testimonials">
       <div class="container">
